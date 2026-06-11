@@ -10,28 +10,6 @@
 <style>
 *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
 :root{
-<<<<<<< HEAD
-  --bg:#0d0d0d;
-  --c1:#141414;
-  --c2:#1c1c1c;
-  --c3:#252525;
-  --c4:#303030;
-  --b1:rgba(255,255,255,0.05);
-  --b2:rgba(255,255,255,0.1);
-  --b3:rgba(255,255,255,0.18);
-  --t1:#ffffff;
-  --t2:#a0a0a0;
-  --t3:#555;
-  --acc:#d4f000;
-  --acc-dim:rgba(212,240,0,0.08);
-  --acc-mid:rgba(212,240,0,0.18);
-  --drop:#ff6b35;
-  --drop-dim:rgba(255,107,53,0.1);
-  --sup:#a78bfa;
-  --sup-dim:rgba(167,139,250,0.1);
-  --pin:#f59e0b;
-  --pin-dim:rgba(245,158,11,0.08);
-=======
   --bg:#0d0d0d;--c1:#141414;--c2:#1c1c1c;--c3:#252525;--c4:#2e2e2e;
   --b1:rgba(255,255,255,0.05);--b2:rgba(255,255,255,0.1);--b3:rgba(255,255,255,0.17);
   --t1:#ffffff;--t2:#a0a0a0;--t3:#555;
@@ -40,7 +18,6 @@
   --sup:#a78bfa;--sup-d:rgba(167,139,250,0.1);--sup-b:rgba(167,139,250,0.25);
   --pin:#f59e0b;--pin-d:rgba(245,158,11,0.07);
   --ok:#22c55e;--ok-d:rgba(34,197,94,0.1);
->>>>>>> 64fd48f (new version: + ordered workout, + dashboard improvements + superset implementation + overall improvements)
   --danger:#ef4444;
   --font:-apple-system,BlinkMacSystemFont,'SF Pro Display',sans-serif;
   --r:12px;
@@ -48,18 +25,6 @@
 html,body{height:100%;overflow:hidden;background:var(--bg)}
 body{color:var(--t1);font-family:var(--font);font-size:15px;display:flex;flex-direction:column}
 
-<<<<<<< HEAD
-/* NAV */
-.nav{display:grid;grid-template-columns:1fr 1fr;background:var(--c1);border-bottom:0.5px solid var(--b1);flex-shrink:0;padding-top:env(safe-area-inset-top,0px)}
-.nav-btn{background:none;border:none;border-bottom:2px solid transparent;color:var(--t3);font-size:13px;font-weight:500;padding:13px 0;cursor:pointer;font-family:var(--font);letter-spacing:0.2px;transition:color .15s}
-.nav-btn.on{color:var(--acc);border-bottom-color:var(--acc)}
-
-/* SCROLL */
-.scroll{flex:1;overflow-y:auto;overflow-x:hidden;-webkit-overflow-scrolling:touch}
-.scroll::-webkit-scrollbar{display:none}
-
-/* PAGES */
-=======
 .nav{display:grid;grid-template-columns:1fr 1fr;background:var(--c1);border-bottom:0.5px solid var(--b1);flex-shrink:0;padding-top:env(safe-area-inset-top,0px)}
 .nav-btn{background:none;border:none;border-bottom:2px solid transparent;color:var(--t3);font-size:13px;font-weight:500;padding:13px 0;cursor:pointer;font-family:var(--font);transition:color .15s}
 .nav-btn.on{color:var(--acc);border-bottom-color:var(--acc)}
@@ -67,7 +32,6 @@ body{color:var(--t1);font-family:var(--font);font-size:15px;display:flex;flex-di
 .scroll{flex:1;overflow-y:auto;overflow-x:hidden;-webkit-overflow-scrolling:touch}
 .scroll::-webkit-scrollbar{display:none}
 
->>>>>>> 64fd48f (new version: + ordered workout, + dashboard improvements + superset implementation + overall improvements)
 .pg{display:none;padding-bottom:100px}.pg.on{display:block}
 
 /* SELECTORS */
@@ -77,93 +41,10 @@ body{color:var(--t1);font-family:var(--font);font-size:15px;display:flex;flex-di
 .selbox select{background:transparent;border:none;color:var(--t1);font-size:15px;font-weight:600;width:100%;outline:none;-webkit-appearance:none;font-family:var(--font);cursor:pointer}
 .selbox select option{background:#1c1c1c}
 
-<<<<<<< HEAD
-/* WEEK DOTS */
-=======
->>>>>>> 64fd48f (new version: + ordered workout, + dashboard improvements + superset implementation + overall improvements)
 .dots{display:flex;gap:4px;padding:2px 14px 10px}
 .dot{flex:1;height:3px;border-radius:2px;background:var(--c3);transition:background .2s}
 .dot.done{background:rgba(212,240,0,0.4)}.dot.cur{background:var(--acc)}
 
-<<<<<<< HEAD
-/* DAY LABEL */
-.daylbl{margin:0 14px 12px;font-size:12px;color:var(--t2);font-weight:400;letter-spacing:0.1px}
-.daylbl span{color:var(--acc);font-weight:600}
-
-/* EXERCISE LIST */
-.exlist{padding:0 14px;display:flex;flex-direction:column;gap:6px}
-
-/* SUPERSET CONNECTOR */
-.ss-connector{display:flex;align-items:center;gap:8px;padding:0 14px;margin:-2px 0}
-.ss-line{flex:1;height:0.5px;background:var(--sup)}
-.ss-tag{font-size:10px;color:var(--sup);background:var(--sup-dim);border:0.5px solid rgba(167,139,250,0.25);border-radius:5px;padding:2px 7px;white-space:nowrap;font-weight:600}
-.ss-toggle{background:none;border:0.5px solid var(--b2);color:var(--t3);font-size:10px;border-radius:5px;padding:2px 7px;cursor:pointer;font-family:var(--font)}
-.ss-toggle.on{border-color:rgba(167,139,250,0.4);color:var(--sup);background:var(--sup-dim)}
-
-/* CARD */
-.excard{background:var(--c1);border:0.5px solid var(--b1);border-radius:var(--r);overflow:hidden}
-.excard.ss-linked{border-color:rgba(167,139,250,0.3)}
-
-/* CARD HEAD */
-.exhead{display:flex;align-items:flex-start;gap:8px;padding:11px 13px 8px}
-.exname{font-size:13px;font-weight:600;flex:1;line-height:1.35;color:var(--t1)}
-.badge-sr{font-size:10px;font-weight:700;color:var(--bg);background:var(--acc);padding:2px 7px;border-radius:5px;white-space:nowrap;flex-shrink:0}
-.badge-rest{font-size:10px;color:var(--t3);white-space:nowrap;flex-shrink:0;margin-top:1px}
-.pinbtn{background:none;border:none;cursor:pointer;font-size:14px;flex-shrink:0;opacity:0.3;transition:opacity .15s;padding:1px 2px;margin-top:1px}
-.pinbtn.on{opacity:1}
-
-/* PREV ROW */
-.prevrow{padding:6px 13px;border-top:0.5px solid var(--b1);display:flex;align-items:center;gap:8px;min-height:30px}
-.prev-lbl{font-size:9px;color:var(--t3);text-transform:uppercase;letter-spacing:0.4px;flex-shrink:0}
-.prev-chips{display:flex;flex-wrap:wrap;gap:4px}
-.pchip{font-size:11px;color:#b8930a;background:rgba(245,158,11,0.08);border:0.5px solid rgba(245,158,11,0.18);border-radius:5px;padding:2px 6px}
-.pchip.drop{color:#cc4a1a;background:rgba(255,107,53,0.08);border-color:rgba(255,107,53,0.2)}
-
-/* SETS AREA */
-.sets-wrap{border-top:0.5px solid var(--b1)}
-
-.set-row{display:flex;align-items:stretch;min-height:46px;border-bottom:0.5px solid var(--b1)}
-.set-row:last-child{border-bottom:none}
-
-.set-num{font-size:10px;color:var(--t3);width:26px;display:flex;align-items:center;justify-content:center;flex-shrink:0;border-right:0.5px solid var(--b1)}
-
-.set-drop-tag{font-size:9px;font-weight:700;color:var(--drop);writing-mode:vertical-rl;text-orientation:mixed;padding:4px 5px;border-right:0.5px solid var(--b1);background:var(--drop-dim);flex-shrink:0;display:none;align-items:center;justify-content:center;cursor:pointer}
-.set-drop-tag.show{display:flex}
-.set-drop-tag.on{color:var(--drop)}
-
-.set-inputs{display:flex;flex:1;align-items:center}
-.set-kg{width:58px;background:transparent;border:none;color:var(--t1);font-size:16px;font-weight:600;outline:none;font-family:var(--font);-moz-appearance:textfield;text-align:center;padding:0 6px;height:46px;border-right:0.5px solid var(--b1)}
-.set-kg::-webkit-outer-spin-button,.set-kg::-webkit-inner-spin-button{-webkit-appearance:none}
-.set-kg::placeholder{color:var(--c4);font-size:13px;font-weight:400}
-.set-x{font-size:12px;color:var(--t3);padding:0 4px;flex-shrink:0}
-.set-rep{width:46px;background:transparent;border:none;color:var(--acc);font-size:16px;font-weight:700;outline:none;font-family:var(--font);-moz-appearance:textfield;text-align:center;padding:0 4px;height:46px}
-.set-rep::-webkit-outer-spin-button,.set-rep::-webkit-inner-spin-button{-webkit-appearance:none}
-.set-rep::placeholder{color:rgba(212,240,0,0.2);font-size:13px;font-weight:400}
-
-.set-actions{display:flex;align-items:stretch;margin-left:auto}
-.set-timer-btn{background:none;border:none;border-left:0.5px solid var(--b1);color:var(--t3);cursor:pointer;padding:0 12px;font-size:14px;height:46px;transition:color .15s}
-.set-timer-btn:active{color:var(--acc);background:var(--acc-dim)}
-.set-add-btn{background:none;border:none;border-left:0.5px solid var(--b1);color:var(--t3);cursor:pointer;padding:0 12px;font-size:20px;height:46px;font-weight:300;transition:color .15s}
-.set-add-btn:active{color:var(--t1);background:var(--c2)}
-.set-del-btn{background:none;border:none;border-left:0.5px solid var(--b1);color:var(--c4);cursor:pointer;padding:0 10px;font-size:18px;height:46px;transition:color .15s}
-.set-del-btn:active{color:var(--danger)}
-
-/* ADD FIRST SET */
-.add-first{padding:10px 13px;border-top:0.5px solid var(--b1)}
-.add-first-btn{width:100%;background:var(--c2);border:0.5px solid var(--b2);border-radius:8px;color:var(--t2);font-size:13px;font-weight:500;padding:10px;cursor:pointer;font-family:var(--font);transition:background .15s}
-.add-first-btn:active{background:var(--c3)}
-
-/* ADVICE */
-.adv{font-size:11px;padding:5px 13px 7px;color:var(--t3);font-style:italic;min-height:0}
-.adv.up{color:var(--acc)}.adv.ok{color:var(--pin)}.adv.dn{color:var(--t3)}
-
-/* PIN NOTE */
-.pinnote{display:none;border-top:0.5px solid rgba(245,158,11,0.15);background:var(--pin-dim);padding:9px 13px}
-.pinnote.on{display:block}
-.pinnote-lbl{font-size:9px;color:var(--pin);text-transform:uppercase;letter-spacing:0.5px;margin-bottom:5px}
-.pinnote textarea{width:100%;background:transparent;border:none;color:var(--t2);font-size:12px;font-family:var(--font);resize:none;outline:none;line-height:1.6;min-height:44px}
-.pinnote textarea::placeholder{color:rgba(245,158,11,0.25);font-style:italic}
-=======
 .daylbl{margin:0 14px 12px;font-size:12px;color:var(--t2);letter-spacing:0.1px}
 .daylbl span{color:var(--acc);font-weight:600}
 
@@ -262,46 +143,19 @@ body{color:var(--t1);font-family:var(--font);font-size:15px;display:flex;flex-di
 .done-btn{width:100%;background:var(--c2);border:0.5px solid var(--b2);border-radius:var(--r);color:var(--t2);font-size:14px;font-weight:500;padding:13px;cursor:pointer;font-family:var(--font);transition:all .15s}
 .done-btn.completed{background:var(--ok-d);border-color:rgba(34,197,94,0.3);color:var(--ok)}
 .done-btn:active{opacity:.8}
->>>>>>> 64fd48f (new version: + ordered workout, + dashboard improvements + superset implementation + overall improvements)
 
 /* TIMER OVERLAY */
 .timer-ov{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.95);z-index:100;flex-direction:column;align-items:center;justify-content:center;gap:20px}
 .timer-ov.on{display:flex}
-<<<<<<< HEAD
-.timer-ex-name{font-size:14px;color:var(--t2);text-align:center;padding:0 30px;line-height:1.5;max-width:280px}
-.ring-wrap{position:relative;width:200px;height:200px}
-.ring-wrap svg{transform:rotate(-90deg)}
-circle{fill:none;stroke-width:5}
-.ring-bg{stroke:var(--c3)}
-.ring-fg{stroke:var(--acc);stroke-linecap:round;transition:stroke-dashoffset 1s linear;stroke-dasharray:565}
-=======
 .timer-ex-name{font-size:14px;color:var(--t2);text-align:center;padding:0 30px;line-height:1.5}
 .ring-wrap{position:relative;width:200px;height:200px}
 .ring-wrap svg{transform:rotate(-90deg)}
 circle{fill:none;stroke-width:5}
 .ring-bg{stroke:var(--c3)}.ring-fg{stroke:var(--acc);stroke-linecap:round;transition:stroke-dashoffset 1s linear;stroke-dasharray:565}
->>>>>>> 64fd48f (new version: + ordered workout, + dashboard improvements + superset implementation + overall improvements)
 .ring-center{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px}
 .timer-num{font-size:52px;font-weight:700;letter-spacing:-3px;color:var(--t1);font-variant-numeric:tabular-nums}
 .timer-sub{font-size:11px;color:var(--t3);text-transform:uppercase;letter-spacing:0.5px}
 .timer-btns{display:flex;gap:10px}
-<<<<<<< HEAD
-.tbtn{background:var(--c2);border:0.5px solid var(--b2);color:var(--t1);border-radius:10px;padding:12px 24px;font-size:14px;font-weight:500;cursor:pointer;font-family:var(--font);transition:opacity .15s}
-.tbtn:active{opacity:.7}
-.tbtn.acc{background:var(--acc);color:var(--bg);border-color:transparent;font-weight:700}
-
-/* BOTTOM BAR */
-.btmbar{position:fixed;bottom:0;left:0;right:0;padding:10px 14px calc(16px + env(safe-area-inset-bottom,0px));background:linear-gradient(transparent,var(--bg) 35%);display:flex;gap:8px;z-index:50}
-.btn-main{flex:1;background:var(--acc);color:var(--bg);border:none;border-radius:var(--r);padding:14px;font-size:14px;font-weight:700;cursor:pointer;font-family:var(--font);letter-spacing:0.2px}
-.btn-sub{background:var(--c1);color:var(--t2);border:0.5px solid var(--b2);border-radius:var(--r);padding:14px 16px;font-size:14px;font-weight:500;cursor:pointer;font-family:var(--font)}
-.btn-main:active,.btn-sub:active{opacity:.8;transform:scale(.98)}
-
-/* TOAST */
-.toast{position:fixed;top:calc(16px + env(safe-area-inset-top,0px));left:50%;transform:translateX(-50%);background:var(--c2);border:0.5px solid var(--b2);color:var(--t1);padding:9px 18px;border-radius:20px;font-size:12px;font-weight:500;opacity:0;pointer-events:none;transition:opacity .2s;z-index:300;white-space:nowrap}
-.toast.on{opacity:1}.toast.ok{border-color:rgba(212,240,0,0.4);color:var(--acc)}
-
-/* ── DASHBOARD ── */
-=======
 .tbtn{background:var(--c2);border:0.5px solid var(--b2);color:var(--t1);border-radius:10px;padding:12px 24px;font-size:14px;font-weight:500;cursor:pointer;font-family:var(--font)}
 .tbtn.acc{background:var(--acc);color:var(--bg);border-color:transparent;font-weight:700}
 .tbtn:active{opacity:.7}
@@ -315,7 +169,6 @@ circle{fill:none;stroke-width:5}
 .toast.on{opacity:1}.toast.ok{border-color:var(--acc-b);color:var(--acc)}
 
 /* DASHBOARD */
->>>>>>> 64fd48f (new version: + ordered workout, + dashboard improvements + superset implementation + overall improvements)
 .dash{padding:14px 14px 30px}
 .sec{font-size:10px;color:var(--t3);text-transform:uppercase;letter-spacing:0.6px;margin-bottom:8px;margin-top:18px}
 .sec:first-child{margin-top:0}
@@ -323,35 +176,6 @@ circle{fill:none;stroke-width:5}
 .stat{background:var(--c1);border:0.5px solid var(--b1);border-radius:var(--r);padding:13px}
 .stat-l{font-size:10px;color:var(--t3);text-transform:uppercase;letter-spacing:0.3px;margin-bottom:4px}
 .stat-v{font-size:24px;font-weight:700;letter-spacing:-1px;color:var(--t1)}
-<<<<<<< HEAD
-.stat-v.acc{color:var(--acc)}
-.stat-s{font-size:10px;color:var(--t3);margin-top:3px}
-
-/* DOTS HEATMAP */
-.hm-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:4px}
-.hm-lbl-row{display:grid;grid-template-columns:repeat(12,1fr);gap:4px;margin-bottom:4px}
-.hm-l{font-size:8px;color:var(--t3);text-align:center}
-.hm-c{aspect-ratio:1;border-radius:3px;background:var(--c2)}
-.hm-c.s1{background:rgba(212,240,0,0.15)}.hm-c.s2{background:rgba(212,240,0,0.35)}.hm-c.s3{background:rgba(212,240,0,0.6)}.hm-c.s4{background:var(--acc)}
-
-/* CHART CARD */
-.cc{background:var(--c1);border:0.5px solid var(--b1);border-radius:var(--r);padding:13px;margin-top:8px}
-.cc-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px}
-.cc-title{font-size:13px;font-weight:600;color:var(--t1)}
-.cc-sel{background:var(--c2);border:0.5px solid var(--b2);color:var(--t1);font-size:11px;border-radius:7px;padding:4px 8px;outline:none;font-family:var(--font);cursor:pointer;max-width:150px}
-.cc-sel option{background:#1c1c1c}
-.cw{position:relative;height:140px}
-
-/* PROGRESS LIST */
-.prog-list{display:flex;flex-direction:column;gap:6px}
-.prog-row{background:var(--c1);border:0.5px solid var(--b1);border-radius:10px;padding:11px 13px;display:flex;align-items:center;gap:10px}
-.prog-name{font-size:12px;font-weight:500;color:var(--t1);flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-.prog-delta{font-size:12px;font-weight:700;flex-shrink:0;white-space:nowrap}
-.prog-delta.pos{color:var(--acc)}
-.prog-delta.neg{color:var(--danger)}
-.prog-delta.neu{color:var(--t3)}
-.prog-val{font-size:11px;color:var(--t3);flex-shrink:0}
-=======
 .stat-v.acc{color:var(--acc)}.stat-v.ok{color:var(--ok)}
 .stat-s{font-size:10px;color:var(--t3);margin-top:3px}
 .hm-lbl-row{display:grid;grid-template-columns:repeat(12,1fr);gap:4px;margin-bottom:4px}
@@ -376,17 +200,12 @@ circle{fill:none;stroke-width:5}
 .log-day{font-size:12px;font-weight:600;color:var(--acc);flex-shrink:0;min-width:60px}
 .log-name{font-size:12px;color:var(--t2);flex:1}
 .log-date{font-size:11px;color:var(--t3);flex-shrink:0}
->>>>>>> 64fd48f (new version: + ordered workout, + dashboard improvements + superset implementation + overall improvements)
 </style>
 </head>
 <body>
 
 <div class="toast" id="toast"></div>
 
-<<<<<<< HEAD
-<!-- TIMER -->
-=======
->>>>>>> 64fd48f (new version: + ordered workout, + dashboard improvements + superset implementation + overall improvements)
 <div class="timer-ov" id="timerOv">
   <div class="timer-ex-name" id="timerExName"></div>
   <div class="ring-wrap">
@@ -411,38 +230,25 @@ circle{fill:none;stroke-width:5}
 </nav>
 
 <div class="scroll">
-<<<<<<< HEAD
-
-=======
->>>>>>> 64fd48f (new version: + ordered workout, + dashboard improvements + superset implementation + overall improvements)
 <div class="pg on" id="pg-train">
   <div class="selrow">
     <div class="selbox"><label>Settimana</label><select id="wSel" onchange="render()"></select></div>
     <div class="selbox"><label>Giorno</label><select id="dSel" onchange="render()"></select></div>
   </div>
   <div class="dots" id="dots"></div>
-<<<<<<< HEAD
-  <div class="daylbl" id="daylbl"></div>
-  <div class="exlist" id="exlist"></div>
-=======
   <div id="completedBanner"></div>
   <div class="daylbl" id="daylbl"></div>
   <div class="exlist" id="exlist"></div>
   <div class="done-wrap">
     <button class="done-btn" id="doneBtn" onclick="toggleDone()">Segna come completato</button>
   </div>
->>>>>>> 64fd48f (new version: + ordered workout, + dashboard improvements + superset implementation + overall improvements)
 </div>
 
 <div class="pg" id="pg-dash">
   <div class="dash">
     <div class="sec">Panoramica</div>
     <div class="statgrid" id="statgrid"></div>
-<<<<<<< HEAD
-    <div class="sec">Settimane</div>
-=======
     <div class="sec">Settimane completate</div>
->>>>>>> 64fd48f (new version: + ordered workout, + dashboard improvements + superset implementation + overall improvements)
     <div class="hm-lbl-row" id="hmLbls"></div>
     <div class="hm-grid" id="hm"></div>
     <div class="cc">
@@ -452,21 +258,6 @@ circle{fill:none;stroke-width:5}
       </div>
       <div class="cw"><canvas id="wChart"></canvas></div>
     </div>
-<<<<<<< HEAD
-    <div class="sec" style="margin-top:14px">Miglioramenti (ultima settimana)</div>
-    <div class="prog-list" id="progList"></div>
-    <div class="cc">
-      <div class="cc-head"><div class="cc-title">Volume totale per settimana</div></div>
-      <div class="cw"><canvas id="vChart"></canvas></div>
-    </div>
-  </div>
-</div>
-
-</div>
-
-<div class="btmbar" id="btmbar">
-  <button class="btn-main" onclick="saveSession()">Salva allenamento</button>
-=======
     <div class="sec" style="margin-top:14px">Miglioramenti recenti</div>
     <div class="prog-list" id="progList"></div>
     <div class="cc">
@@ -481,21 +272,10 @@ circle{fill:none;stroke-width:5}
 
 <div class="btmbar" id="btmbar">
   <button class="btn-main" onclick="saveSession()">Salva</button>
->>>>>>> 64fd48f (new version: + ordered workout, + dashboard improvements + superset implementation + overall improvements)
   <button class="btn-sub" onclick="exportJSON()">↓ JSON</button>
 </div>
 
 <script>
-<<<<<<< HEAD
-const SCHEDA=[
-  {name:"G1: Petto, Spalle, Tricipiti",muscles:["Petto","Spalle","Tricipiti"],exercises:[
-    {name:"Panca piana",              sr:"4x6",  rest:120,w1:27.5},
-    {name:"Croci ai cavi bassi",      sr:"3x12", rest:90, w1:14},
-    {name:"Chest press + Piegamenti", sr:"3x15", rest:90, w1:70},
-    {name:"Lento avanti manubri",     sr:"3x8",  rest:120,w1:18},
-    {name:"Alzate frontali al cavo",  sr:"2x15", rest:90, w1:7},
-    {name:"Alzate alla Sarcev",       sr:"3x15", rest:90, w1:6},
-=======
 // ── SCHEDA DATA ────────────────────────────────────────────────────────────
 const BASE_SCHEDA=[
   {name:"G1: Petto, Spalle, Tricipiti",muscles:["Petto","Spalle","Tricipiti"],exercises:[
@@ -505,50 +285,11 @@ const BASE_SCHEDA=[
     {name:"Lento avanti manubri",     sr:"3x8",  rest:120,w1:22},
     {name:"Alzate frontali al cavo",  sr:"2x15", rest:90, w1:9},
     {name:"Alzate alla Sarcev",       sr:"3x15", rest:90, w1:8},
->>>>>>> 64fd48f (new version: + ordered workout, + dashboard improvements + superset implementation + overall improvements)
     {name:"Dip",                      sr:"3x12", rest:90, w1:0},
     {name:"French press manubri",     sr:"2x10", rest:90, w1:10},
     {name:"Push down corda Isomix",   sr:"3x15", rest:90, w1:18},
   ]},
   {name:"G2: Dorso, Bicipiti",muscles:["Dorso","Bicipiti"],exercises:[
-<<<<<<< HEAD
-    {name:"Trazioni corpo libero",        sr:"3x8",  rest:120,w1:0},
-    {name:"Lat machine presa larga",      sr:"4x10", rest:90, w1:59},
-    {name:"Rematore bilanciere",          sr:"4x8",  rest:90, w1:25},
-    {name:"Pull down corda",              sr:"3x15", rest:90, w1:14},
-    {name:"Pulley mono-laterale",         sr:"3x10", rest:90, w1:20},
-    {name:"Curl panca inclinata",         sr:"4x10", rest:90, w1:9},
-    {name:"Hammer curl EZ",              sr:"3x12", rest:90, w1:7.5},
-    {name:"Addome",                       sr:"3x-",  rest:60, w1:0},
-  ]},
-  {name:"G3: Gambe",muscles:["Quadricipiti","Femorali","Polpacci"],exercises:[
-    {name:"Pressa orizz. + Wall sit",     sr:"4x12", rest:120,w1:81},
-    {name:"Leg curl seduto",              sr:"3x10", rest:120,w1:68},
-    {name:"Leg extension + Sissy squat",  sr:"3x10", rest:90, w1:70},
-    {name:"Pressa orizzontale mono",      sr:"2x12", rest:90, w1:50},
-    {name:"Leg curl sdraiato dropset",    sr:"3x15", rest:90, w1:36},
-    {name:"Polpacci su rialzo",           sr:"4x20", rest:90, w1:15},
-  ]},
-  {name:"G4: Upper, Focus Spalle",muscles:["Petto","Spalle","Dorso","Bicipiti","Tricipiti"],exercises:[
-    {name:"Spinte multipower panca",      sr:"3x8",  rest:120,w1:20},
-    {name:"Croci manubri 30° dropset",    sr:"3x10", rest:90, w1:14},
-    {name:"Diamond push-ups",            sr:"3x15", rest:90, w1:0},
-    {name:"Lento avanti multipower",      sr:"4x8",  rest:120,w1:13},
-    {name:"Alzate laterali da seduto",    sr:"3x15", rest:90, w1:7},
-    {name:"Arnold press",                 sr:"2x10", rest:90, w1:14},
-    {name:"Deltoidi posteriori",          sr:"2x12", rest:90, w1:15},
-    {name:"Lat machine presa stretta",    sr:"3x15", rest:90, w1:45},
-    {name:"Curl manubri panca 75°",       sr:"3x12", rest:90, w1:9},
-    {name:"Addome",                       sr:"3x-",  rest:60, w1:0},
-  ]},
-];
-
-// ── Storage ─────────────────────────────────────────────────────────────
-const SK=(w,d,e)=>`s_${w}_${d}_${e}`;
-const PK=n=>`pin_${n.replace(/\W/g,'_')}`;
-const NK=n=>`note_${n.replace(/\W/g,'_')}`;
-const SSK=(d,e)=>`ss_${d}_${e}`;
-=======
     {name:"Trazioni corpo libero",    sr:"3x8",  rest:120,w1:0},
     {name:"Lat machine presa larga",  sr:"4x10", rest:90, w1:59},
     {name:"Rematore bilanciere",      sr:"4x8",  rest:90, w1:22.5},
@@ -595,35 +336,11 @@ function getOrder(d){
 }
 function saveOrder(d,order){localStorage.setItem(OK(d),JSON.stringify(order));}
 function getScheda(d){const order=getOrder(d);return order.map(i=>({...BASE_SCHEDA[d].exercises[i],origIdx:i}));}
->>>>>>> 64fd48f (new version: + ordered workout, + dashboard improvements + superset implementation + overall improvements)
 
 function getSets(w,d,e){try{return JSON.parse(localStorage.getItem(SK(w,d,e)))||[];}catch{return[];}}
 function saveSets(w,d,e,s){localStorage.setItem(SK(w,d,e),JSON.stringify(s));}
 function getPrev(w,d,e){return w<=1?[]:getSets(w-1,d,e);}
 function isSS(d,e){return localStorage.getItem(SSK(d,e))==='1';}
-<<<<<<< HEAD
-function toggleSS(d,e){
-  const was=isSS(d,e);
-  localStorage.setItem(SSK(d,e),was?'0':'1');
-  // update visual
-  const btn=document.getElementById(`ssbtn_${d}_${e}`);
-  const conn=document.getElementById(`ssconn_${d}_${e}`);
-  if(btn){btn.classList.toggle('on',!was);btn.textContent=!was?'Superset ON':'Superset';}
-  const card1=document.getElementById(`card_${d}_${e}`);
-  const card2=document.getElementById(`card_${d}_${e+1}`);
-  if(card1) card1.classList.toggle('ss-linked',!was);
-  if(card2) card2.classList.toggle('ss-linked',!was);
-  if(conn) conn.style.display=!was?'flex':'none';
-}
-
-// ── Advice ───────────────────────────────────────────────────────────────
-function getAdv(sr,sets){
-  const norm=sets.filter(s=>!s.drop);
-  if(!norm.length) return {t:'',c:''};
-  const m=sr.match(/x(\d+)/); if(!m) return {t:'',c:''};
-  const tgt=+m[1];
-  const best=norm.reduce((a,s)=>s.rep&&+s.rep>+a.rep?s:a,norm[0]);
-=======
 function toggleSSStorage(d,e){
   const was=isSS(d,e);
   localStorage.setItem(SSK(d,e),was?'0':'1');
@@ -643,7 +360,6 @@ function getAdv(sr,sets){
   const m=sr.match(/x(\d+)/); if(!m) return {t:'',c:''};
   const tgt=+m[1];
   const best=main.reduce((a,s)=>(s.rep&&+s.rep>+(a.rep||0)?s:a),main[0]);
->>>>>>> 64fd48f (new version: + ordered workout, + dashboard improvements + superset implementation + overall improvements)
   if(!best||!best.rep) return {t:'',c:''};
   const r=+best.rep;
   if(r>=tgt) return {t:'↑  +2.5 kg la prossima volta',c:'up'};
@@ -651,11 +367,7 @@ function getAdv(sr,sets){
   return {t:'→  mantieni il peso',c:'dn'};
 }
 
-<<<<<<< HEAD
-// ── Timer ────────────────────────────────────────────────────────────────
-=======
 // ── Timer ─────────────────────────────────────────────────────────────────
->>>>>>> 64fd48f (new version: + ordered workout, + dashboard improvements + superset implementation + overall improvements)
 let TI=null,TT=0,TL=0;
 const CIRC=565;
 function startTimer(secs,name){
@@ -668,21 +380,13 @@ function startTimer(secs,name){
 }
 function tickTimer(){
   document.getElementById('timerNum').textContent=TL;
-<<<<<<< HEAD
-  const pct=TL/TT;
-  document.getElementById('ringFg').style.strokeDashoffset=CIRC*(1-pct);
-=======
   const p=TL/TT;
   document.getElementById('ringFg').style.strokeDashoffset=CIRC*(1-p);
->>>>>>> 64fd48f (new version: + ordered workout, + dashboard improvements + superset implementation + overall improvements)
   document.getElementById('ringFg').style.stroke=TL<=5?'#f59e0b':'#d4f000';
 }
 function stopTimer(){clearInterval(TI);TI=null;document.getElementById('timerOv').classList.remove('on');document.getElementById('btmbar').style.display='flex';}
 function skipTimer(){stopTimer();}
 
-<<<<<<< HEAD
-// ── Render Training ──────────────────────────────────────────────────────
-=======
 // ── Reorder ───────────────────────────────────────────────────────────────
 function moveEx(d,orderPos,dir){
   const order=getOrder(d);
@@ -694,7 +398,6 @@ function moveEx(d,orderPos,dir){
 }
 
 // ── Render ────────────────────────────────────────────────────────────────
->>>>>>> 64fd48f (new version: + ordered workout, + dashboard improvements + superset implementation + overall improvements)
 function render(){
   const w=+document.getElementById('wSel').value;
   const d=+document.getElementById('dSel').value;
@@ -704,24 +407,6 @@ function render(){
   const dc=document.getElementById('dots');dc.innerHTML='';
   for(let i=1;i<=12;i++){const el=document.createElement('div');el.className='dot'+(i<w?' done':i===w?' cur':'');dc.appendChild(el);}
 
-<<<<<<< HEAD
-  const day=SCHEDA[d];
-  document.getElementById('daylbl').innerHTML=`<span>${day.name}</span>`;
-
-  const list=document.getElementById('exlist');list.innerHTML='';
-
-  day.exercises.forEach((ex,ei)=>{
-    // superset connector BEFORE card (if prev ex linked)
-    if(ei>0){
-      const connDiv=document.createElement('div');
-      connDiv.id=`ssconn_${d}_${ei-1}`;
-      connDiv.className='ss-connector';
-      connDiv.style.display=isSS(d,ei-1)?'flex':'none';
-      connDiv.innerHTML=`<div class="ss-line"></div><div class="ss-tag">Superset</div><div class="ss-line"></div>`;
-      list.appendChild(connDiv);
-    }
-
-=======
   // completed banner
   const banner=document.getElementById('completedBanner');
   const doneDate=getDoneDate(w,d);
@@ -741,29 +426,11 @@ function render(){
 
   exercises.forEach((ex,orderPos)=>{
     const ei=ex.origIdx;
->>>>>>> 64fd48f (new version: + ordered workout, + dashboard improvements + superset implementation + overall improvements)
     const sets=getSets(w,d,ei);
     const prev=getPrev(w,d,ei);
     const pinned=localStorage.getItem(PK(ex.name))==='1';
     const note=localStorage.getItem(NK(ex.name))||'';
     const adv=getAdv(ex.sr,sets);
-<<<<<<< HEAD
-    const linked=isSS(d,ei)||isSS(d,ei-1);
-
-    // prev chips html
-    const prevHtml=prev.length
-      ? prev.map(s=>`<span class="pchip${s.drop?' drop':''}">${s.kg>0?s.kg+'kg':'BW'} × ${s.rep||'—'}</span>`).join('')
-      : `<span style="font-size:11px;color:var(--t3)">${w===1?'primo allenamento':'nessun dato'}</span>`;
-
-    const card=document.createElement('div');
-    card.className='excard'+(linked?' ss-linked':'');
-    card.id=`card_${d}_${ei}`;
-    card.innerHTML=`
-      <div class="exhead">
-        <div class="exname">${ex.name}</div>
-        <span class="badge-sr">${ex.sr}</span>
-        <span class="badge-rest">${ex.rest}s</span>
-=======
     const ssNext=isSS(d,ei);
     const ssPrev=orderPos>0&&isSS(d,exercises[orderPos-1].origIdx);
 
@@ -793,20 +460,14 @@ function render(){
         <span class="badge-sr">${ex.sr}</span>
         <span class="badge-rest">${ex.rest}s</span>
         ${orderPos<exercises.length-1?`<button class="ss-toggle-btn${ssNext?' on':''}" onclick="doToggleSS(${d},${ei})">${ssNext?'⇄ SS':'⇄'}</button>`:''}
->>>>>>> 64fd48f (new version: + ordered workout, + dashboard improvements + superset implementation + overall improvements)
         <button class="pinbtn${pinned?' on':''}" onclick="togglePin('${ex.name}',${d},${ei})">📌</button>
       </div>
       <div class="prevrow">
         <div class="prev-lbl">Prec</div>
         <div class="prev-chips">${prevHtml}</div>
       </div>
-<<<<<<< HEAD
-      <div class="sets-wrap" id="sw_${d}_${ei}"></div>
-      <div class="add-first" id="af_${d}_${ei}"></div>
-=======
       <div id="sw_${d}_${ei}"></div>
       <div id="af_${d}_${ei}"></div>
->>>>>>> 64fd48f (new version: + ordered workout, + dashboard improvements + superset implementation + overall improvements)
       <div class="adv ${adv.c}" id="adv_${d}_${ei}">${adv.t}</div>
       <div class="pinnote${pinned?' on':''}" id="pn_${d}_${ei}">
         <div class="pinnote-lbl">Nota tecnica</div>
@@ -815,19 +476,6 @@ function render(){
     `;
     list.appendChild(card);
     renderSets(w,d,ei,ex);
-<<<<<<< HEAD
-
-    // superset toggle after card (not last)
-    if(ei<day.exercises.length-1){
-      const ss=document.createElement('div');
-      ss.style.cssText='display:flex;justify-content:flex-end;padding:0 2px';
-      ss.innerHTML=`<button id="ssbtn_${d}_${ei}" class="ss-toggle${isSS(d,ei)?' on':''}" onclick="toggleSS(${d},${ei})">${isSS(d,ei)?'Superset ON':'Superset'}</button>`;
-      list.appendChild(ss);
-    }
-  });
-}
-
-=======
   });
 }
 
@@ -836,23 +484,11 @@ function doToggleSS(d,ei){
   render();
 }
 
->>>>>>> 64fd48f (new version: + ordered workout, + dashboard improvements + superset implementation + overall improvements)
 function renderSets(w,d,ei,ex){
   const sets=getSets(w,d,ei);
   const sw=document.getElementById(`sw_${d}_${ei}`);
   const af=document.getElementById(`af_${d}_${ei}`);
   if(!sw||!af) return;
-<<<<<<< HEAD
-  sw.innerHTML='';
-
-  if(!sets.length){
-    af.innerHTML=`<button class="add-first-btn" onclick="addSet(${w},${d},${ei},false)">+ Aggiungi primo set</button>`;
-    return;
-  }
-  af.innerHTML='';
-
-  sets.forEach((s,si)=>{
-=======
   sw.innerHTML='';af.innerHTML='';
 
   if(!sets.length){
@@ -891,68 +527,19 @@ function renderSets(w,d,ei,ex){
     // + button at end
     inlineHtml+=`<button class="iset-add" onclick="addInlineSet(${w},${d},${ei},${si})">+</button>`;
 
->>>>>>> 64fd48f (new version: + ordered workout, + dashboard improvements + superset implementation + overall improvements)
     const row=document.createElement('div');
     row.className='set-row';
     row.innerHTML=`
       <div class="set-num">${si+1}</div>
-<<<<<<< HEAD
-      <div class="set-drop-tag${s.drop?' show on':''}" onclick="toggleDrop(${w},${d},${ei},${si})" title="Dropset">DS</div>
-      <div class="set-inputs">
-        <input class="set-kg" type="number" inputmode="decimal" step="0.5" placeholder="kg"
-          value="${s.kg!=null&&s.kg!==''?s.kg:''}"
-          onchange="updSet(${w},${d},${ei},${si},'kg',this.value)">
-        <span class="set-x">×</span>
-        <input class="set-rep" type="number" inputmode="numeric" step="1" placeholder="rep"
-          value="${s.rep!=null&&s.rep!==''?s.rep:''}"
-          onchange="updSet(${w},${d},${ei},${si},'rep',this.value);updAdv(${w},${d},${ei})">
-      </div>
-      <div class="set-actions">
-        <button class="set-timer-btn" onclick="startTimer(${ex.rest},'${ex.name}')">▶</button>
-        <button class="set-add-btn" onclick="addSetAfter(${w},${d},${ei},${si})">+</button>
-        <button class="set-del-btn" onclick="delSet(${w},${d},${ei},${si})">×</button>
-=======
       <div class="set-type-tag ${typeClass}" onclick="toggleDrop(${w},${d},${ei},${si})" title="Tap per dropset">${typeLabel}${s.drop?'':`<span style="font-size:7px;color:var(--c4);margin-top:1px;letter-spacing:0">DS?</span>`}</div>
       <div class="inline-sets">${inlineHtml}</div>
       <div class="set-actions">
         <button class="act-btn timer" onclick="startTimer(${ex.rest},'${ex.name}')">▶</button>
         <button class="act-btn del" onclick="delSet(${w},${d},${ei},${si})">×</button>
->>>>>>> 64fd48f (new version: + ordered workout, + dashboard improvements + superset implementation + overall improvements)
       </div>
     `;
     sw.appendChild(row);
   });
-<<<<<<< HEAD
-}
-
-function addSet(w,d,ei,drop){
-  const sets=getSets(w,d,ei);
-  const last=sets[sets.length-1];
-  sets.push({kg:last?last.kg:'',rep:'',drop:!!drop});
-  saveSets(w,d,ei,sets);
-  renderSets(w,d,ei,SCHEDA[d].exercises[ei]);
-}
-function addSetAfter(w,d,ei,si){
-  const sets=getSets(w,d,ei);
-  const ref=sets[si];
-  // insert after si — inherit kg, empty rep
-  sets.splice(si+1,0,{kg:ref?ref.kg:'',rep:'',drop:false});
-  saveSets(w,d,ei,sets);
-  renderSets(w,d,ei,SCHEDA[d].exercises[ei]);
-}
-function delSet(w,d,ei,si){
-  const sets=getSets(w,d,ei);
-  sets.splice(si,1);
-  saveSets(w,d,ei,sets);
-  renderSets(w,d,ei,SCHEDA[d].exercises[ei]);
-  updAdv(w,d,ei);
-}
-function updSet(w,d,ei,si,f,v){
-  const sets=getSets(w,d,ei);
-  if(sets[si]) sets[si][f]=v!==''?+v:'';
-  saveSets(w,d,ei,sets);
-}
-=======
 
   // add set button
   af.innerHTML=`<div class="add-first"><button class="add-first-btn" onclick="addFirstSet(${w},${d},${ei})">+ Set</button></div>`;
@@ -1006,22 +593,14 @@ function delSet(w,d,ei,si){
   renderSets(w,d,ei,SCHEDA_EX(d,ei));
   updAdv(w,d,ei);
 }
->>>>>>> 64fd48f (new version: + ordered workout, + dashboard improvements + superset implementation + overall improvements)
 function toggleDrop(w,d,ei,si){
   const sets=getSets(w,d,ei);
   if(sets[si]) sets[si].drop=!sets[si].drop;
   saveSets(w,d,ei,sets);
-<<<<<<< HEAD
-  renderSets(w,d,ei,SCHEDA[d].exercises[ei]);
-}
-function updAdv(w,d,ei){
-  const ex=SCHEDA[d].exercises[ei];
-=======
   renderSets(w,d,ei,SCHEDA_EX(d,ei));
 }
 function updAdv(w,d,ei){
   const ex=BASE_SCHEDA[d].exercises[ei];
->>>>>>> 64fd48f (new version: + ordered workout, + dashboard improvements + superset implementation + overall improvements)
   const adv=getAdv(ex.sr,getSets(w,d,ei));
   const el=document.getElementById(`adv_${d}_${ei}`);
   if(el){el.textContent=adv.t;el.className='adv '+adv.c;}
@@ -1029,26 +608,6 @@ function updAdv(w,d,ei){
 function togglePin(name,d,ei){
   const was=localStorage.getItem(PK(name))==='1';
   localStorage.setItem(PK(name),was?'0':'1');
-<<<<<<< HEAD
-  const btn=document.querySelector(`#card_${d}_${ei} .pinbtn`);
-  const pn=document.getElementById(`pn_${d}_${ei}`);
-  if(btn) btn.classList.toggle('on',!was);
-  if(pn) pn.classList.toggle('on',!was);
-}
-function saveNote(ta){localStorage.setItem(NK(ta.dataset.name),ta.value);}
-
-function saveSession(){showToast('Salvato','ok');}
-function exportJSON(){
-  const out={esportato:new Date().toISOString(),note:{},sessioni:{}};
-  for(let k in localStorage){if(k.startsWith('note_')) out.note[k.slice(5)]=localStorage[k];}
-  for(let w=1;w<=12;w++) for(let d=0;d<4;d++){
-    let arr=[],has=false;
-    SCHEDA[d].exercises.forEach((_,ei)=>{
-      const s=getSets(w,d,ei);
-      if(s.length){has=true;arr.push({nome:SCHEDA[d].exercises[ei].name,sets:s});}
-    });
-    if(has) out.sessioni[`S${String(w).padStart(2,'0')}_G${d+1}`]={giorno:SCHEDA[d].name,esercizi:arr};
-=======
   document.querySelector(`#card_${d}_${ei} .pinbtn`)?.classList.toggle('on',!was);
   document.getElementById(`pn_${d}_${ei}`)?.classList.toggle('on',!was);
 }
@@ -1077,7 +636,6 @@ function exportJSON(){
       if(s.length){has=true;arr.push({nome:BASE_SCHEDA[d].exercises[ei].name,sets:s});}
     });
     if(has) out.sessioni[`S${String(w).padStart(2,'0')}_G${d+1}`]={giorno:BASE_SCHEDA[d].name,completato:getDoneDate(w,d),esercizi:arr};
->>>>>>> 64fd48f (new version: + ordered workout, + dashboard improvements + superset implementation + overall improvements)
   }
   if(!Object.keys(out.sessioni).length){showToast('Nessun dato ancora');return;}
   const a=document.createElement('a');
@@ -1086,22 +644,6 @@ function exportJSON(){
   a.click();showToast('Backup scaricato','ok');
 }
 
-<<<<<<< HEAD
-// ── Dashboard ────────────────────────────────────────────────────────────
-let wCh=null,vCh=null;
-function buildDash(){
-  // Stats
-  let sess=0,exLog=0,bestS=0,curS=0,prs=0;
-  for(let w=1;w<=12;w++) for(let d=0;d<4;d++){
-    let has=false;
-    SCHEDA[d].exercises.forEach((_,ei)=>{if(getSets(w,d,ei).length){exLog++;has=true;}});
-    if(has){sess++;curS++;bestS=Math.max(bestS,curS);}else curS=0;
-  }
-  SCHEDA.forEach((day,d)=>day.exercises.forEach((ex,ei)=>{
-    let mx=ex.w1;
-    for(let w=1;w<=12;w++){
-      const s=getSets(w,d,ei).filter(x=>x.kg!==''&&x.kg!=null);
-=======
 // ── DASHBOARD ──────────────────────────────────────────────────────────────
 let wCh=null,vCh=null;
 function buildDash(){
@@ -1117,18 +659,12 @@ function buildDash(){
     let mx=ex.w1;
     for(let w=1;w<=12;w++){
       const s=getSets(w,d,ei).flatMap(x=>x.inlineSets||[{kg:x.kg}]).filter(x=>x.kg!==''&&x.kg!=null);
->>>>>>> 64fd48f (new version: + ordered workout, + dashboard improvements + superset implementation + overall improvements)
       if(s.length){const m=Math.max(...s.map(x=>+x.kg));if(m>mx){mx=m;prs++;}}
     }
   }));
   document.getElementById('statgrid').innerHTML=`
-<<<<<<< HEAD
-    <div class="stat"><div class="stat-l">Sessioni</div><div class="stat-v acc">${sess}</div><div class="stat-s">su 48 totali</div></div>
-    <div class="stat"><div class="stat-l">Esercizi log</div><div class="stat-v">${exLog}</div><div class="stat-s">registrati</div></div>
-=======
     <div class="stat"><div class="stat-l">Sessioni log</div><div class="stat-v acc">${sess}</div><div class="stat-s">su 48 totali</div></div>
     <div class="stat"><div class="stat-l">Completati</div><div class="stat-v ok">${completedDays}</div><div class="stat-s">giorni segnati</div></div>
->>>>>>> 64fd48f (new version: + ordered workout, + dashboard improvements + superset implementation + overall improvements)
     <div class="stat"><div class="stat-l">Streak</div><div class="stat-v acc">${bestS}</div><div class="stat-s">consec. max</div></div>
     <div class="stat"><div class="stat-l">PR</div><div class="stat-v">${prs}</div><div class="stat-s">pesi migliorati</div></div>
   `;
@@ -1139,38 +675,19 @@ function buildDash(){
   for(let w=1;w<=12;w++){
     const l=document.createElement('div');l.className='hm-l';l.textContent='S'+w;hl.appendChild(l);
     let cnt=0;
-<<<<<<< HEAD
-    for(let d=0;d<4;d++) if(SCHEDA[d].exercises.some((_,ei)=>getSets(w,d,ei).length)) cnt++;
-    const c=document.createElement('div');c.className='hm-c'+(cnt?` s${cnt}`:'');hg.appendChild(c);
-=======
     for(let d=0;d<4;d++) if(isDone(w,d)) cnt++;
     const c=document.createElement('div');c.className='hm-c'+(cnt?` s${cnt}`:'');c.title=`S${w}: ${cnt}/4 giorni`;hg.appendChild(c);
->>>>>>> 64fd48f (new version: + ordered workout, + dashboard improvements + superset implementation + overall improvements)
   }
 
   // Exercise selector
   const sel=document.getElementById('exSel');sel.innerHTML='';
-<<<<<<< HEAD
-  SCHEDA.forEach((day,d)=>day.exercises.forEach((ex,ei)=>{
-=======
   BASE_SCHEDA.forEach((day,d)=>day.exercises.forEach((ex,ei)=>{
->>>>>>> 64fd48f (new version: + ordered workout, + dashboard improvements + superset implementation + overall improvements)
     if(ex.sr==='3x-') return;
     const o=document.createElement('option');o.value=`${d}_${ei}`;
     o.textContent=ex.name.length>22?ex.name.slice(0,22)+'…':ex.name;sel.appendChild(o);
   }));
   renderWChart();
 
-<<<<<<< HEAD
-  // Progress delta list
-  const pl=document.getElementById('progList');pl.innerHTML='';
-  const deltas=[];
-  SCHEDA.forEach((day,d)=>day.exercises.forEach((ex,ei)=>{
-    if(ex.sr==='3x-') return;
-    let curW=0,prevW=0;
-    for(let w=12;w>=1;w--){
-      const s=getSets(w,d,ei).filter(x=>x.kg!==''&&x.kg!=null&&!x.drop);
-=======
   // Progress deltas
   const pl=document.getElementById('progList');pl.innerHTML='';
   const deltas=[];
@@ -1179,52 +696,32 @@ function buildDash(){
     let curW=0,prevW=0;
     for(let w=12;w>=1;w--){
       const s=getSets(w,d,ei).filter(x=>!x.drop);
->>>>>>> 64fd48f (new version: + ordered workout, + dashboard improvements + superset implementation + overall improvements)
       if(s.length&&!curW) curW=w;
       else if(s.length&&curW&&!prevW){prevW=w;break;}
     }
     if(!curW) return;
-<<<<<<< HEAD
-    const curMax=Math.max(...getSets(curW,d,ei).filter(x=>!x.drop&&x.kg!==''&&x.kg!=null).map(x=>+x.kg));
-    let prevMax=null;
-    if(prevW) prevMax=Math.max(...getSets(prevW,d,ei).filter(x=>!x.drop&&x.kg!==''&&x.kg!=null).map(x=>+x.kg));
-=======
     const getMaxKg=w=>Math.max(...getSets(w,d,ei).filter(x=>!x.drop).flatMap(x=>x.inlineSets||[{kg:x.kg}]).filter(x=>x.kg!==''&&x.kg!=null).map(x=>+x.kg));
     const curMax=getMaxKg(curW);
     const prevMax=prevW?getMaxKg(prevW):null;
->>>>>>> 64fd48f (new version: + ordered workout, + dashboard improvements + superset implementation + overall improvements)
     const delta=prevMax!==null?+(curMax-prevMax).toFixed(1):null;
     deltas.push({name:ex.name,cur:curMax,delta,w:curW});
   }));
   deltas.sort((a,b)=>(b.delta||0)-(a.delta||0));
-<<<<<<< HEAD
-  if(!deltas.length){pl.innerHTML='<div style="font-size:12px;color:var(--t3);padding:8px 0">Nessun dato ancora — inizia ad allenarti</div>';return;}
-  deltas.slice(0,12).forEach(({name,cur,delta,w})=>{
-    const cls=delta===null?'neu':delta>0?'pos':delta<0?'neg':'neu';
-    const dTxt=delta===null?'—':delta>0?`+${delta} kg`:delta<0?`${delta} kg`:'= stesso';
-    pl.innerHTML+=`<div class="prog-row"><div class="prog-name">${name}</div><div class="prog-delta ${cls}">${dTxt}</div><div class="prog-val">${cur}kg · S${w}</div></div>`;
-=======
   if(!deltas.length){pl.innerHTML='<div style="font-size:12px;color:var(--t3);padding:4px 0">Nessun dato ancora</div>';}
   else deltas.slice(0,10).forEach(({name,cur,delta,w})=>{
     const cls=delta===null?'neu':delta>0?'pos':delta<0?'neg':'neu';
     const dTxt=delta===null?'primo dato':delta>0?`+${delta} kg`:delta<0?`${delta} kg`:'= stesso';
     pl.innerHTML+=`<div class="prog-row"><div class="prog-name">${name}</div><div class="delta ${cls}">${dTxt}</div><div class="prog-val">${cur}kg</div></div>`;
->>>>>>> 64fd48f (new version: + ordered workout, + dashboard improvements + superset implementation + overall improvements)
   });
 
   // Volume trend
   const vols=Array.from({length:12},(_,wi)=>{
     let v=0;
-<<<<<<< HEAD
-    SCHEDA.forEach((day,d)=>day.exercises.forEach((_,ei)=>{
-      getSets(wi+1,d,ei).forEach(s=>{if(s.kg!==''&&s.kg!=null&&s.rep) v+=+s.kg*+s.rep;});
-=======
     BASE_SCHEDA.forEach((day,d)=>day.exercises.forEach((_,ei)=>{
       getSets(wi+1,d,ei).forEach(s=>{
         const isets=s.inlineSets||[{kg:s.kg,rep:s.rep}];
         isets.forEach(is=>{if(is.kg!==''&&is.kg!=null&&is.rep) v+=+is.kg*+is.rep;});
       });
->>>>>>> 64fd48f (new version: + ordered workout, + dashboard improvements + superset implementation + overall improvements)
     }));return v;
   });
   if(vCh) vCh.destroy();
@@ -1233,8 +730,6 @@ function buildDash(){
     data:{labels:Array.from({length:12},(_,i)=>'S'+(i+1)),datasets:[{data:vols,borderColor:'#d4f000',backgroundColor:'rgba(212,240,0,0.06)',borderWidth:2,pointRadius:3,pointBackgroundColor:'#d4f000',tension:0.4,fill:true,spanGaps:true}]},
     options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},scales:{x:{grid:{color:'rgba(255,255,255,0.03)'},ticks:{color:'#555',font:{size:10}}},y:{grid:{color:'rgba(255,255,255,0.03)'},ticks:{color:'#555',font:{size:10},callback:v=>v>999?Math.round(v/1000)+'k':v}}}}
   });
-<<<<<<< HEAD
-=======
 
   // Completed log
   const ll=document.getElementById('logList');ll.innerHTML='';
@@ -1247,18 +742,13 @@ function buildDash(){
   else logs.reverse().slice(0,10).forEach(({w,d,date,name})=>{
     ll.innerHTML+=`<div class="log-row"><div class="log-day">S${w} G${d+1}</div><div class="log-name">${name}</div><div class="log-date">${date}</div></div>`;
   });
->>>>>>> 64fd48f (new version: + ordered workout, + dashboard improvements + superset implementation + overall improvements)
 }
 
 function renderWChart(){
   const val=document.getElementById('exSel').value;if(!val) return;
   const [d,ei]=val.split('_').map(Number);
   const data=Array.from({length:12},(_,wi)=>{
-<<<<<<< HEAD
-    const s=getSets(wi+1,d,ei).filter(x=>!x.drop&&x.kg!==''&&x.kg!=null);
-=======
     const s=getSets(wi+1,d,ei).filter(x=>!x.drop).flatMap(x=>x.inlineSets||[{kg:x.kg}]).filter(x=>x.kg!==''&&x.kg!=null);
->>>>>>> 64fd48f (new version: + ordered workout, + dashboard improvements + superset implementation + overall improvements)
     return s.length?Math.max(...s.map(x=>+x.kg)):null;
   });
   if(wCh) wCh.destroy();
@@ -1283,17 +773,10 @@ function showToast(msg,type){
   setTimeout(()=>t.className='toast',2200);
 }
 
-<<<<<<< HEAD
-// ── Init ──────────────────────────────────────────────────────────────────
-const wS=document.getElementById('wSel'),dS=document.getElementById('dSel');
-for(let w=1;w<=12;w++){const o=document.createElement('option');o.value=w;o.textContent='Settimana '+w;wS.appendChild(o);}
-SCHEDA.forEach((_,i)=>{const o=document.createElement('option');o.value=i;o.textContent='Giorno '+(i+1);dS.appendChild(o);});
-=======
 // ── INIT ──────────────────────────────────────────────────────────────────
 const wS=document.getElementById('wSel'),dS=document.getElementById('dSel');
 for(let w=1;w<=12;w++){const o=document.createElement('option');o.value=w;o.textContent='Settimana '+w;wS.appendChild(o);}
 BASE_SCHEDA.forEach((_,i)=>{const o=document.createElement('option');o.value=i;o.textContent='Giorno '+(i+1);dS.appendChild(o);});
->>>>>>> 64fd48f (new version: + ordered workout, + dashboard improvements + superset implementation + overall improvements)
 const lw=localStorage.getItem('lw'),ld=localStorage.getItem('ld');
 if(lw) wS.value=lw; if(ld) dS.value=ld;
 render();
